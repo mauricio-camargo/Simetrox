@@ -1,2 +1,3 @@
 # Simetrox
  
+Simetrógrafo digital.
