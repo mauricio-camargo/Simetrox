@@ -1,0 +1,189 @@
+object Form1: TForm1
+  Left = 550
+  Height = 875
+  Top = 187
+  Width = 1060
+  Caption = 'Simetrox'
+  ClientHeight = 875
+  ClientWidth = 1060
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poDefault
+  LCLVersion = '2.2.6.0'
+  WindowState = wsMaximized
+  object Panel1: TPanel
+    Left = 0
+    Height = 875
+    Top = 0
+    Width = 299
+    Align = alLeft
+    ClientHeight = 875
+    ClientWidth = 299
+    TabOrder = 0
+    object Button1: TButton
+      Left = 17
+      Height = 60
+      Top = 9
+      Width = 253
+      Caption = 'Abrir foto'
+      Font.Color = clBlue
+      Font.Style = [fsBold]
+      OnClick = Button1Click
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Panel3: TPanel
+      Left = 9
+      Height = 279
+      Top = 85
+      Width = 282
+      ClientHeight = 279
+      ClientWidth = 282
+      TabOrder = 1
+      object Label3: TLabel
+        Left = 51
+        Height = 25
+        Top = 19
+        Width = 68
+        Caption = 'Rotação:'
+        ParentColor = False
+      end
+      object Button4: TButton
+        Left = 9
+        Height = 51
+        Top = 53
+        Width = 123
+        Caption = '- Esquerda'
+        OnClick = Button4Click
+        TabOrder = 0
+      end
+      object Button3: TButton
+        Left = 145
+        Height = 51
+        Top = 53
+        Width = 123
+        Caption = 'Direita +'
+        OnClick = Button3Click
+        TabOrder = 1
+      end
+      object Label5: TLabel
+        Left = 94
+        Height = 25
+        Top = 157
+        Width = 48
+        Caption = 'Zoom'
+        ParentColor = False
+      end
+      object SpinZ: TSpinEditEx
+        Left = 68
+        Height = 33
+        Top = 199
+        Width = 103
+        MaxLength = 0
+        TabOrder = 2
+        OnChange = SpinZChange
+        Increment = 5
+        MaxValue = 200
+        MinValue = 10
+        NullValue = 0
+        Value = 100
+      end
+      object Label2: TLabel
+        Left = 149
+        Height = 25
+        Top = 19
+        Width = 51
+        Caption = '0 grau'
+        ParentColor = False
+      end
+    end
+    object Panel4: TPanel
+      Left = 9
+      Height = 292
+      Top = 401
+      Width = 282
+      ClientHeight = 292
+      ClientWidth = 282
+      TabOrder = 2
+      object CheckBox1: TCheckBox
+        Left = 34
+        Height = 29
+        Top = 0
+        Width = 156
+        Caption = 'Sobrepor grade'
+        OnChange = CheckBox1Change
+        TabOrder = 0
+      end
+      object Label1: TLabel
+        Left = 68
+        Height = 25
+        Top = 60
+        Width = 104
+        Caption = 'Cor da grade'
+        Enabled = False
+        ParentColor = False
+      end
+      object ColorButton1: TColorButton
+        Left = 77
+        Height = 37
+        Top = 102
+        Width = 112
+        BorderWidth = 3
+        ButtonColorSize = 23
+        ButtonColor = clSilver
+        Enabled = False
+        OnColorChanged = ColorButton1ColorChanged
+      end
+      object Label4: TLabel
+        Left = 26
+        Height = 25
+        Top = 171
+        Width = 182
+        Caption = 'Espaçamento da grade'
+        Enabled = False
+        ParentColor = False
+      end
+      object SpinG: TSpinEditEx
+        Left = 77
+        Height = 33
+        Top = 222
+        Width = 103
+        Enabled = False
+        MaxLength = 0
+        TabOrder = 1
+        OnChange = SpinGChange
+        Increment = 5
+        MaxValue = 160
+        MinValue = 5
+        NullValue = 0
+        Value = 35
+      end
+    end
+  end
+  object Panel2: TPanel
+    Left = 299
+    Height = 875
+    Top = 0
+    Width = 761
+    Align = alClient
+    ClientHeight = 875
+    ClientWidth = 761
+    TabOrder = 1
+    object BGCont: TBGRAGraphicControl
+      Left = 1
+      Height = 873
+      Top = 1
+      Width = 759
+      Align = alClient
+      OnRedraw = BGContRedraw
+      Color = clWhite
+      ColorOpacity = 128
+      Alignment = taCenter
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 427
+    Top = 85
+  end
+end
